@@ -1,0 +1,26 @@
+{
+  "name": "amazoncypress",
+  "version": "1.0.0",
+  "description": "Amazon project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "test:record": "cypress run --record --key 9e4b0e7d-90d5-481d-b009-27a2e4488706 --spec cypress/integration/examples/BDD/Amazon.feature"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cucumber-html-reporter": "^6.0.0",
+    "cypress": "^13.14.2",
+    "cypress-cucumber-preprocessor": "^4.3.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
